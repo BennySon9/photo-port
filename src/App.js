@@ -3,6 +3,7 @@ import Nav from "./components/Nav";
 import About from "./components/About";
 import Gallery from "./components/Gallery";
 import PhotoList from "./components/PhotoList";
+import ContactForm from "./components/Contact";
 
 function App() {
   const [categories] = useState([
@@ -29,12 +30,11 @@ function App() {
         currentCategory={currentCategory}
       ></Nav>
       <main>
-        <div>
-          <Gallery currentCategory={currentCategory}></Gallery>
-          <PhotoList></PhotoList>
-          <About></About>
-        </div>
+        <ContactForm></ContactForm>
+        <Gallery currentCategory={currentCategory}></Gallery>
+        <About></About>
       </main>
+      <PhotoList></PhotoList>
     </div>
   );
 }
